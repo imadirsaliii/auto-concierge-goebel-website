@@ -1,3 +1,4 @@
-# Vorschau-Stand: nicht indexieren. Livegang: livegang.py ersetzt diese Datei durch robots_live.txt
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://auto-concierge-goebel.de/sitemap.xml
