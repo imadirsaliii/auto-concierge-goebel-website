@@ -17,10 +17,10 @@
 <meta property="og:site_name" content="Auto-Concierge Göbel">
 <meta property="og:title" content="Auto-Concierge Göbel · Auto prüfen, kaufen oder verkaufen">
 <meta property="og:description" content="Fahrzeugprüfung ab 79 €, Autokauf und -verkauf in Ihrem Auftrag. Raum Köln–Bonn und online.">
-<meta property="og:image" content="https://auto-concierge-goebel.de/assets/og-bild.png">
+<meta property="og:image" content="https://ac-goebel.de/assets/og-bild.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Auto-Concierge Göbel","description":"Autokauf und -verkauf in Ihrem Auftrag: Fahrzeugprüfung, Fahrzeugsuche, Verhandlung und Organisation.","telephone":"+49 151 67311676","email":"info@auto-concierge-goebel.de","url":"https://auto-concierge-goebel.de/","openingHours":"Mo-Su 08:00-20:00","areaServed":["Bonn","Alfter","Bornheim","Köln","Rhein-Sieg-Kreis","Euskirchen (nach Absprache)","Deutschland"],"address":{"@type":"PostalAddress","streetAddress":"Am Domplatz 23","addressLocality":"Alfter","postalCode":"53347","addressCountry":"DE"}}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Auto-Concierge Göbel","description":"Autokauf und -verkauf in Ihrem Auftrag: Fahrzeugprüfung, Fahrzeugsuche, Verhandlung und Organisation.","telephone":"+49 151 67311676","email":"info@ac-goebel.de","url":"https://ac-goebel.de/","openingHours":"Mo-Su 08:00-20:00","areaServed":["Bonn","Alfter","Bornheim","Köln","Rhein-Sieg-Kreis","Euskirchen (nach Absprache)","Deutschland"],"address":{"@type":"PostalAddress","streetAddress":"Am Domplatz 23","addressLocality":"Alfter","postalCode":"53347","addressCountry":"DE"}}
 </script>
 </head>
 <body>
@@ -254,13 +254,13 @@
         <li>Geprüfter Automobilverkäufer nach dem Branchenstandard der Gütegemeinschaft AutoBerufe, dem über 30 Fahrzeugmarken angehören (Zertifikat 2019)</li>
         <li>Alfter, für Sie im Raum Köln–Bonn unterwegs</li>
       </ul>
-      <p class="direkt"><a class="tel-gross" href="tel:+4915167311676">0151 67311676</a><br>Täglich von 8 bis 20 Uhr erreichbar<br><a href="mailto:info@auto-concierge-goebel.de">info@auto-concierge-goebel.de</a></p>
+      <p class="direkt"><a class="tel-gross" href="tel:+4915167311676">0151 67311676</a><br>Täglich von 8 bis 20 Uhr erreichbar<br><a href="mailto:info@ac-goebel.de">info@ac-goebel.de</a></p>
     </div>
-    <form id="rueckrufForm" name="rueckruf" method="post" action="mailto:info@auto-concierge-goebel.de?subject=R%C3%BCckruf-Anfrage" enctype="text/plain">
+    <form id="rueckrufForm" name="rueckruf" method="post" action="mailto:info@ac-goebel.de?subject=R%C3%BCckruf-Anfrage" enctype="text/plain">
       <h3>Wann dürfen wir Sie anrufen?</h3>
       <p class="hp" aria-hidden="true"><label>Nicht ausfüllen <input id="f-hp" name="website" tabindex="-1" autocomplete="off"></label></p>
-      <div class="feld"><label for="f-name">Ihr Name</label><input id="f-name" name="Name" type="text" autocomplete="name" required></div>
-      <div class="feld"><label for="f-tel">Ihre Telefonnummer</label><input id="f-tel" name="Telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="Mit Vorwahl, z. B. 0151 …" required></div>
+      <div class="feld"><label for="f-name">Ihr Name</label><input id="f-name" name="Name" type="text" autocomplete="name" maxlength="120" required></div>
+      <div class="feld"><label for="f-tel">Ihre Telefonnummer</label><input id="f-tel" name="Telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" pattern="\+?[0-9 \(\)\/.\-]{6,40}" title="Bitte mit Vorwahl, nur Ziffern, Leerzeichen und + ( ) / . -" placeholder="Mit Vorwahl, z. B. 0151 …" required></div>
       <div class="feld"><label for="f-zeit">Wann passt es Ihnen?</label>
         <select id="f-zeit" name="Wunschzeit" required>
           <option value="">Bitte wählen</option>
@@ -268,7 +268,7 @@
           <option>Nachmittags (12 bis 17 Uhr)</option>
           <option>Abends (17 bis 20 Uhr)</option>
         </select></div>
-      <div class="feld"><label for="f-thema">Worum geht es? <span class="opt">(freiwillig)</span></label><textarea id="f-thema" name="Anliegen" placeholder="z. B. Kombi bis 15.000 €, Prüfung eines Gebrauchten, Verkauf meines Autos"></textarea></div>
+      <div class="feld"><label for="f-thema">Worum geht es? <span class="opt">(freiwillig)</span></label><textarea id="f-thema" name="Anliegen" maxlength="2000" aria-describedby="f-thema-hint" placeholder="z. B. Kombi bis 15.000 €, Prüfung eines Gebrauchten, Verkauf meines Autos"></textarea><span class="opt" id="f-thema-hint">Bitte keine Gesundheitsdaten oder anderen sensiblen Angaben eintragen.</span></div>
       <button class="btn btn-voll" type="submit">Rückruf vereinbaren</button>
       <p class="form-hint" id="formHint" role="status">Kein Kauf ohne Ihr Ja. Ihre Angaben nutzen wir nur für den Rückruf, mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     </form>
@@ -282,10 +282,10 @@
     <div>
       <img src="assets/wortmarke-weiss.svg" alt="Auto-Concierge Göbel" width="300" height="24">
       <p class="claim">Sie entscheiden. Wir kümmern uns.</p>
-      <p class="fkontakt">Manfred Göbel · Alfter · Raum Köln–Bonn und online<br><a href="tel:+4915167311676">0151 67311676</a> · <a href="mailto:info@auto-concierge-goebel.de">info@auto-concierge-goebel.de</a></p>
+      <p class="fkontakt">Manfred Göbel · Alfter · Raum Köln–Bonn und online<br><a href="tel:+4915167311676">0151 67311676</a> · <a href="mailto:info@ac-goebel.de">info@ac-goebel.de</a></p>
     </div>
     <nav aria-label="Rechtliches">
-      <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a><a href="widerrufsbelehrung.html">Widerrufsbelehrung</a><a href="mailto:info@auto-concierge-goebel.de?subject=Widerruf&body=Bitte%20Name%2C%20Anschrift%20und%20Auftrag%20angeben.">Vertrag widerrufen</a>
+      <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a><a href="widerrufsbelehrung.html">Widerrufsbelehrung</a><a href="mailto:info@ac-goebel.de?subject=Widerruf&body=Bitte%20Name%2C%20Anschrift%20und%20Auftrag%20angeben.">Vertrag widerrufen</a>
     </nav>
   </div>
 </footer>

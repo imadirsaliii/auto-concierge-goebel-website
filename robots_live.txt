@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://auto-concierge-goebel.de/sitemap.xml
+Sitemap: https://ac-goebel.de/sitemap.xml
