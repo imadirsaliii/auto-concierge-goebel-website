@@ -1,6 +1,6 @@
-// Rückruf-Formular: POST (JSON) an unseren eigenen Endpunkt (Mail ans Geschäftspostfach), danach danke.html.
-// Rückfall auf ein vorbereitetes E-Mail-Programm, wenn der Endpunkt nicht antwortet. Kein externer Formulardienst.
-const FORM_ENDPOINT = 'https://api.ac-goebel.de/formular/anfrage';
+// Rückruf-Formular: mit gesetztem FORM_ENDPOINT POST (JSON) an unseren eigenen Endpunkt, danach danke.html; sonst (Stand 28.10.2026) öffnet es das vorbereitete E-Mail-Programm. Kein externer Formulardienst.
+// TEMP bis TLS-Zertifikat api.ac-goebel.de (Imad, IONOS): leer = nur Mailprogramm-Weg, wie Datenschutz 3. Danach Endpunkt https://api.ac-goebel.de/formular/anfrage wieder setzen.
+const FORM_ENDPOINT = '';
 const TEL_ANRUF = '0151 67311676';
 const form = document.getElementById('rueckrufForm');
 if (form) {
@@ -38,7 +38,8 @@ if (form) {
     const body = 'Name: ' + data.name + NL + 'Telefon: ' + data.telefon + NL + 'Wunschzeit: ' + data.wunschzeit + (data.anliegen ? NL + NL + 'Anliegen:' + NL + data.anliegen : '');
     window.location.href = 'mailto:info@ac-goebel.de?subject=' + encodeURIComponent('Rückruf: ' + data.name) + '&body=' + encodeURIComponent(body);
     btn.disabled = false;
-    say('Das Senden hat nicht geklappt. Ihr E-Mail-Programm öffnet sich mit der vorbereiteten Anfrage, bitte senden Sie sie ab. Oder rufen Sie uns an: ' + TEL_ANRUF + '.', true);
+    if (FORM_ENDPOINT) { say('Das Senden hat nicht geklappt. Ihr E-Mail-Programm öffnet sich mit der vorbereiteten Anfrage, bitte senden Sie sie ab. Oder rufen Sie uns an: ' + TEL_ANRUF + '.', true); }
+    else { say('Ihr E-Mail-Programm öffnet sich mit der vorbereiteten Anfrage. Bitte senden Sie sie dort ab. Oder rufen Sie uns an: ' + TEL_ANRUF + '.', false); }
   });
 }
 // Nur eine Frage gleichzeitig offen
